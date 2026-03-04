@@ -96,6 +96,7 @@
       font-weight: 700;
       color: #F2F6FF;
       letter-spacing: 0.04em;
+      white-space: nowrap;
     }
 
     .brand-note {
@@ -247,6 +248,10 @@
       color: rgba(198, 224, 255, 0.95);
       font-weight: 600;
       letter-spacing: 0.03em;
+    }
+
+    .hero-break-mobile {
+      display: none;
     }
 
     .nowrap {
@@ -2041,13 +2046,55 @@
       .kpi-strip { grid-template-columns: 1fr; }
       .timeline-grid { grid-template-columns: 1fr; }
       .hero { min-height: auto; }
-      .phone-frame { width: 280px; }
+      .hero-card {
+        justify-self: center;
+        width: 100%;
+        min-height: auto;
+      }
+      .phone-frame {
+        width: min(86vw, 340px);
+        margin: 0 auto;
+      }
       .hero-line-em {
         display: block;
         white-space: normal;
         padding: 4px 10px 6px;
       }
       .hero-nowrap { white-space: normal; }
+      .hero-break-mobile { display: block; }
+      .brand {
+        gap: 8px;
+      }
+      .brand-name {
+        font-size: 18px;
+      }
+      .brand-note {
+        font-size: 11px;
+        margin-left: 4px;
+      }
+      .timeline-card {
+        grid-template-columns: 78px 1fr;
+        gap: 8px;
+      }
+      .timeline-title {
+        font-size: 12px;
+        padding-top: 44px;
+      }
+      .timeline-item.top .timeline-bar-wrap {
+        width: max(var(--bar, 19%), 170px);
+      }
+      .seg-labels {
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+        gap: 6px;
+      }
+      .seg-labels span {
+        white-space: normal;
+        text-align: center;
+        font-size: 11px;
+      }
+      .seg-labels small {
+        font-size: 10px;
+      }
       .metrics { grid-template-columns: 1fr; }
       .hero-connector,
       .rail-arrow { display: none; }
@@ -2067,7 +2114,7 @@
       <div class="container hero hero-block">
         <div>
           <div class="eyebrow">PROPERTY MANAGEMENT AI APP</div>
-          <h1><span class="hero-line-main">管理業務を支える</span><span class="hero-line-em hero-nowrap">優秀なアシスタント雇いませんか？</span><span class="hero-subline"><span class="hero-subline-text">不動産ポケットが叶えます</span></span></h1>
+          <h1><span class="hero-line-main">管理業務を支える</span><span class="hero-line-em hero-nowrap">優秀なアシスタント<span class="hero-break-mobile"></span>雇いませんか？</span><span class="hero-subline"><span class="hero-subline-text">不動産ポケットが叶えます</span></span></h1>
           
           <div class="brand">
             <img src="images/早應AIアプリロゴ.png" alt="不動産Pocket" />
